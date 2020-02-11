@@ -25,4 +25,5 @@ $pip install oauth2client
 $pip install bs4
 $pip install re
 
+Here's a few books to get you started on your journey https://github.com/hackerkid/Mind-Expanding-Books
 Happy reading! or even, happy listening!
