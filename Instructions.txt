@@ -1,0 +1,65 @@
+Create a new a google account.
+
+https://accounts.google.com/signup
+Allow less secure apps. This will allow the files to be emailed.
+https://myaccount.google.com/lesssecureapps
+open ebook.py apply your new address, password, and email destintion (kindles email) to the respective lines.
+lines 133, 134 and 135
+
+
+go to https://console.cloud.google.com/getting-started
+
+select "select new project" >> "New Project"
+name your project (I named mine, Book Upload) and select "Create" 
+select "select new project" >> "your project" (Book Upload)
+select "API's & Services". >> "Dashboard"
+select "+ Enable API's and Services"
+Search "Drive" then select "Google Drive API"
+"Enable"
+Select "Credentials" (on the left)
+Select "Configure Consent Screen"
+Select "External" >> "Create"
+Name your Application. I recommend the same name >> "Save"
+Select "Credentials" >> "Create Credentials" >> "OAuth Client ID"
+for "Application Type", select "Web Application" >> "Create"
+Add https://developers.google.com/oauthplayground in “Authorized redirect URIs”
+You will now see your client ID and client secret. You will need to put these into the drive.py file respectively as strings. Once done, select "OK"
+you will need these for the next step as well
+
+
+go to https://developers.google.com/oauthplayground/
+
+scroll down to and select "Drive API v3", select "https://googleapis.com/auth/drive" >> "authorize API's"
+Allow Google OAuth 2.0 Playground to access your selected account.
+click the gear icon (top right), "Autho 2.0 Configuration" >> select the box for "Use your own OAuth credentials" and input your credentials from previous.
+"close"
+Select "Exchange authorization code for tokens"
+you will now see your refresh token under "Step 2". Copy this into your drive.py file
+
+
+go to your google drive https://drive.google.com/drive/u/0/my-drive
+
+create a new folder, name it "Books"
+Go into the folder on by using the left sidebar. "My Drive" >> "Books"
+Your address bar will now display your folders location. https://drive.google.com/drive/u/0/folders/1Y389iLY7jGTfoIT3fbH_6GG1STVHKYKF
+You will need to copy the characters after the last / into the ebook.py file at line 117 so that "parents" : ["INPUT HERE"]
+
+
+you will now need to run drive.py file in terminal.
+
+go to the directory where the python files are located. Example
+$ cd /users/YOURNAME/documents/FOLDER/
+run drive.py
+$ python drive.py
+you will see a long code printed out. this is the token that is refreshed everytime the script is run. you will need to delete the last few characters so the script has no ", at the end of it. to do this, go into the drive.py file and at line 31, change the number 158 however many digits down until the code printed ends without a comma and contains only the characters needed. This is beacuase it will always generate the same length of code, however that length will always vary the first time the script is ran. for some, it may be anywhere between [18:158] to [18:152].
+once the code printed is exact
+go into drive.py
+delete line 33
+amend line 30 and delete the # at the start of the line
+delete line 31
+the final line should be the amended
+return credentials.to_json()[18:15?] #return new access token
+
+
+you will now be able to run lib.py sending books to your kindle and google drive.
+Enjoy!
