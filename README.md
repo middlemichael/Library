@@ -4,7 +4,7 @@ download, convert and send books from LibGen so you can read and listen to them 
 Search through terminal Library Genesis, have any book converted to mobi and epub to then be directly sent to your google drive and your kindle. 
 This will allow you to read the book immediately and have it read to you.
 using an ereader with inbuilt text-to-spech you can uplaod files from google drive directly to your text to speech reader.
-I use VoiceDream which comes with the Australian voice Lisa.
+I use VoiceDream (https://www.voicedream.com/reader/) which comes with the Australian voice Lisa.
 see here: https://www.acapela-group.com/demos/
 select English AU and Lisa
 
