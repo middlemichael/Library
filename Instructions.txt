@@ -1,3 +1,11 @@
+Install Calibre
+
+https://calibre-ebook.com/download
+open ebook.py file. go to lines 61 & 62
+if using macOS, delete line 62
+else, delete line 61.
+
+
 Create a new a google account.
 
 https://accounts.google.com/signup
