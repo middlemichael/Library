@@ -23,10 +23,9 @@ def accesstoken():
 
     credentials.refresh(httplib2.Http())  # refresh the access token (optional)
     http = credentials.authorize(httplib2.Http())  # apply the credentials
-    #return credentials.to_json()[18:153] #return new access token
-    print(credentials.to_json()[18:158],"\n")
+    s = credentials.to_json()[18:]
+    return s.partition('"')[0] #return new access token
 
-accesstoken()
 
 
 
