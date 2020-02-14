@@ -53,21 +53,6 @@ Your address bar will now display your folders location. https://drive.google.co
 You will need to copy the characters after the last / into the ebook.py file at line 117 so that "parents" : ["INPUT HERE"]
 
 
-you will now need to run drive.py file in terminal.
-
-go to the directory where the python files are located. Example
-$ cd /users/YOURNAME/documents/FOLDER/
-run drive.py
-$ python drive.py
-you will see a long code printed out. this is the token that is refreshed everytime the script is run. you will need to delete the last few characters so the script has no ", at the end of it. to do this, go into the drive.py file and at line 31, change the number 158 however many digits down until the code printed ends without a comma and contains only the characters needed. This is beacuase it will always generate the same length of code, however that length will always vary the first time the script is ran. for some, it may be anywhere between [18:158] to [18:152].
-once the code printed is exact
-go into drive.py
-delete line 33
-amend line 30 and delete the # at the start of the line
-delete line 31
-the final line should be the amended
-return credentials.to_json()[18:15?] #return new access token
-
-
 you will now be able to run lib.py sending books to your kindle and google drive.
+$python lib.py
 Enjoy!
